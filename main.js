@@ -38,6 +38,6 @@ let prefix = 'c!';
 
 //activation des commandes
 let CommandFile = bot.commands.get(commands.slice(prefix.length));
-if (CommandFile) CommandFile.run(message, bot, args)
+if (CommandFile) CommandFile.run(message, bot, args);
 
 });
