@@ -14,7 +14,7 @@ bot.on('ready', async () => {
 //systeme de classement des commands
 bot.commands = new Discord.Collection();
 
-fs.readdir('./commands/', (err, files) {
+fs.readdir('./commands/', (err, files) => {
     if (err) console.log(err);
 
     let jsFile = files.filter(f => f.split('.').pop() === 'js');
