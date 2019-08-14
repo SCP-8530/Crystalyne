@@ -4,6 +4,14 @@ const bot = new Discord.Client();
 
 let prefix = 'c!';
 
+//information de connection
+bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XVLatg.VoibNE70MbR1rY_uvejpDD52-vY')
+bot.on('ready', async () => {
+    console.log('bot connecter');
+    bot.user.setActivity("Observer Langitia");
+});
+
+//systeme de classement des commands
 bot.commands = new Discord.Collection();
 
 fs.readdir('./commands/', (err, files) {
@@ -21,12 +29,3 @@ fs.readdir('./commands/', (err, files) {
     });
 });
  
-
-bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XVLatg.VoibNE70MbR1rY_uvejpDD52-vY')
-
-bot.on('ready', async () => {
-    console.log('bot connecter');
-    bot.user.setActivity("Observer Langitia");
-});
-
-
