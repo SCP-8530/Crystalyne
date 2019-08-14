@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 let prefix = 'c!';
 
-bot.login('env.process.TOKEN')
+bot.login('process.env.token')
 
 bot.on('ready', async () => {
     console.log('bot connecter');
