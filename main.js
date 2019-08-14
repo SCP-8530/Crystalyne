@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
+const fs = require('fs');
 const bot = new Discord.Client();
 
-bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XVLatg.VoibNE70MbR1rY_uvejpDD52-vY')
+bot.login('process.env.TOKEN')
 
 bot.on('ready', async () => {
     console.log('bot connecter');
