@@ -36,7 +36,7 @@ bot.on('message', async message => {
 //let pour les commandes
 let prefix = 'c!';
 let messageArray = message.content.split(' ');
-let command = messageArray[0];
+let commands = messageArray[0];
 let args = messageArray.slice(1);
 
 //activation des commandes
