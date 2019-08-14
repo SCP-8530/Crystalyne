@@ -33,8 +33,11 @@ fs.readdir('./commands/', (err, files) => {
 
 bot.on('message', async message => {
 
-//prefix
+//let pour les commandes
 let prefix = 'c!';
+let messageArray = message.content.split(' ');
+let command = messageArray[0];
+let args = messageArray.slice(1);
 
 //activation des commandes
 let CommandFile = bot.commands.get(commands.slice(prefix.length));
