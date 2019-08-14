@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require('fs');
 const bot = new Discord.Client();
 
-let prefix = 'c!';
+
 
 //information de connection
 bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XVLatg.VoibNE70MbR1rY_uvejpDD52-vY')
@@ -28,4 +28,16 @@ fs.readdir('./commands/', (err, files) => {
         bot.commands.set(props.help.name, props);
     });
 });
- 
+
+
+
+bot.on('message', async message => {
+
+//prefix
+let prefix = 'c!';
+
+//activation des commandes
+let CommandFile = bot.commands.get(commands.slice(prefix.length));
+if (CommandFile) CommandFile.run(message, bot, args)
+
+});
