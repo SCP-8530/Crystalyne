@@ -4,6 +4,24 @@ const bot = new Discord.Client();
 
 let prefix = 'c!';
 
+bot.commands = new Discord.Collection();
+
+fs.readdir('./commands/', (err, files) {
+    if (err) console.log(err);
+
+    let jsFile = files.filter(f => f.split('.').pop() === 'js');
+    if (jsFile.length <= 0){
+        console.log('commande introvable');
+        return;
+    };
+
+    jsFile.forEach ((f, i) => {
+        let props = require(`./commmands/${f}`);
+        bot.commands.set(props.help.name, props);
+    });
+});
+ 
+
 bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XVLatg.VoibNE70MbR1rY_uvejpDD52-vY')
 
 bot.on('ready', async () => {
