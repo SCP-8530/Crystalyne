@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, message, args, send) => {
     message.channel.send('ok -_-');
     console.log('commande fonctionnelle');
 };

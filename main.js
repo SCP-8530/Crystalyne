@@ -35,7 +35,7 @@ bot.on('message', async message => {
 
     if (message.author.bot) return;
     if (message.channel.type === 'dm') return;
-    
+
     //let pour les commandes
     let prefix = 'c!';
     let messageArray = message.content.split(' ');
@@ -44,6 +44,6 @@ bot.on('message', async message => {
 
     //activation des commandes
     let CommandFile = bot.commands.get(commands.slice(prefix.length));
-    if (CommandFile) CommandFile.run(message, bot, args);
+    if (CommandFile) CommandFile.run(message, bot, args, send);
 
 });
