@@ -1,0 +1,8 @@
+ajout de la command pf{
+    commande de pile ou face
+}
+ajout d'un modele pour les commandes
+modification de l'emplacement des fichier {
+    ajout du dossier hors bots
+    deplacement de patch note dans hors bots
+}
