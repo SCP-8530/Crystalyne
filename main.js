@@ -19,9 +19,11 @@ bot.on('message', async message => {
     let messageArray = message.content.split(' ');
     let commands = messageArray[0];
     let args = messageArray.slice(1);
+
+
+    if (args[0].toLowerCase() === prefix + 'pf'){
+        let event = random(0,1);
+        if (event==0) return message.channel.send("Tu lance une piece en l'air. quand tu la ratrape elle tombe sur **Face**")
+        if (event==1) return message.channel.send("Tu lance une piece en l'air. quand tu la ratrape elle tombe sur **Pile**")
+    };
 });
-
-
-let event = random(0,1);
-if (event==0) return message.channel.send("Tu lance une piece en l'air. quand tu la ratrape elle tombe sur **Face**")
-if (event==1) return message.channel.send("Tu lance une piece en l'air. quand tu la ratrape elle tombe sur **Pile**")
