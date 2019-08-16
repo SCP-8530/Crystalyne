@@ -11,39 +11,17 @@ bot.on('ready', async () => {
     bot.user.setActivity("Observer Langitia");
 });
 
-//systeme de classement des commands
-bot.commands = new Discord.Collection();
-
-fs.readdir('./commands/', (err, files) => {
-    if (err) console.log(err);
-
-    let jsFile = files.filter(f => f.split('.').pop() === 'js');
-    if (jsFile.length <= 0){
-        console.log('commande introvable');
-        return;
-    };
-
-    jsFile.forEach ((f, i) => {
-        let props = require(`./commands/${f}`);
-        bot.commands.set(props.help.name, props);
-    });
-});
-
-
-
 bot.on('message', async message => {
-
     if (message.author.bot) return;
     if (message.channel.type === 'dm') return;
-
-    //let pour les commandes
+    
     let prefix = 'c!';
     let messageArray = message.content.split(' ');
     let commands = messageArray[0];
     let args = messageArray.slice(1);
-
-    //activation des commandes
-    let CommandFile = bot.commands.get(commands.slice(prefix.length));
-    if (CommandFile) CommandFile.run(message, bot, args, send);
-
 });
+
+
+let event = random(0,1);
+if (event==0) return message.channel.send("Tu lance une piece en l'air. quand tu la ratrape elle tombe sur **Face**")
+if (event==1) return message.channel.send("Tu lance une piece en l'air. quand tu la ratrape elle tombe sur **Pile**")
