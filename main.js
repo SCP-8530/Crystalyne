@@ -26,4 +26,9 @@ bot.on('message', async message => {
         if (event==0) return message.channel.send("Tu lance une piece en l'air. quand tu la ratrape elle tombe sur **Face**")
         if (event==1) return message.channel.send("Tu lance une piece en l'air. quand tu la ratrape elle tombe sur **Pile**")
     };
+    
+    if (args[0].toLowerCase() === prefix + 'pf'){
+        message.channel.send('ok -_-');
+        console.log('commande fonctionnelle');
+    )};
 });
