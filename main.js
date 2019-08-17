@@ -5,7 +5,7 @@ const bot = new Discord.Client();
 
 
 //information de connection
-bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XVLatg.VoibNE70MbR1rY_uvejpDD52-vY')
+bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XViUow.a0DTOxZvgSB1v_dvr7bNCBg5RdA')
 bot.on('ready', async () => {
     console.log('bot connecter');
     bot.user.setActivity("Observer Langitia");
