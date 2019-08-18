@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require(`discord.js`);
 
 module.exports.run = async (bot, message, args) => {
     let event = random(0,1);
@@ -9,7 +9,3 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
     name: 'pf'
 };
-
-
-
-//penser a supprimer les messages hors code sauf si sais un repaire pour se retourver

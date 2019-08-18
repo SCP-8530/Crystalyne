@@ -1,10 +1,10 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    message.channel.send('ok -_-');
     console.log('commande fonctionnelle');
+    return message.channel.send('ok -_-');
 };
 
 module.exports.help = {
-    name: 'maj'
+    name: "maj"
 };

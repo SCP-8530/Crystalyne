@@ -1,8 +1,23 @@
-const Discord = require(`discord.js`);
-const fs = require(`fs`);
+const Discord = require('discord.js');
+const fs = require('fs');
 const bot = new Discord.Client();
 
+bot.commands = new Discord.Collection();
 
+fs.readdir('./commands/', (err, files) => {
+    if (err) console.log(err);
+
+    let jsFile = files.filter(f => f.split('.').pop() === 'js');
+    if (jsFile.length <= 0){
+        console.log('commande introuvable');
+        return;
+    };
+
+    jsFile.forEach ((f, i) => {
+        let props = require(`./commands/${f}`);
+        bot.commands.set(props.help.name, props);
+    });
+});
 
 //information de connection
 bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XViUow.a0DTOxZvgSB1v_dvr7bNCBg5RdA')
@@ -17,18 +32,9 @@ bot.on('message', async message => {
     
     let prefix = 'c!';
     let messageArray = message.content.split(' ');
-    let commands = messageArray[0];
+    let command = messageArray[0];
     let args = messageArray.slice(1);
 
-
-    if (args[0].toLowerCase() === prefix + 'pf'){
-        let event = random(0,1);
-        if (event==0) return message.channel.send("Tu lance une piece en l'air. quand tu la ratrape elle tombe sur **Face**")
-        if (event==1) return message.channel.send("Tu lance une piece en l'air. quand tu la ratrape elle tombe sur **Pile**")
-    };
-    
-    if (args[0].toLowerCase() === prefix + 'pf'){
-        message.channel.send('ok -_-');
-        console.log('commande fonctionnelle');
-    };
+    let commandFile = bot.commands.get(command.slice(prefix.length));
+    if (commandFile) CommandFile.run(bot, message, args);
 });
