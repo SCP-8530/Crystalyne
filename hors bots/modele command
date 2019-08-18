@@ -5,6 +5,5 @@ module.exports.run = async (bot, message, args) => {
 };
 
 module.exports.help = {
-    name: ''
-    //mettre le nom de la commande
+    name: '/*nom de la commande*/'
 };

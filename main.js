@@ -1,5 +1,5 @@
-const Discord = require("discord.js");
-const fs = require('fs');
+const Discord = require(`discord.js`);
+const fs = require(`fs`);
 const bot = new Discord.Client();
 
 
@@ -30,5 +30,5 @@ bot.on('message', async message => {
     if (args[0].toLowerCase() === prefix + 'pf'){
         message.channel.send('ok -_-');
         console.log('commande fonctionnelle');
-    )};
+    };
 });
