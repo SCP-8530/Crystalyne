@@ -30,5 +30,5 @@ bot.on('message', async message => {
     if (args[0].toLowerCase() === prefix + 'pf'){
         message.channel.send('ok -_-');
         console.log('commande fonctionnelle');
-    )};
+    };
 });
