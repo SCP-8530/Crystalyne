@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     console.log('commande fonctionnelle');
     let Here = message.guild.member(
-        message.mentions.users.first() || message.guild.members.get(args[0])
+        message.mentions.first() || message.guild.members.get(args[0])
     );
 
     //if(!Here) return message.channel.send('tu as oublier de mentionner here');

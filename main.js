@@ -21,10 +21,9 @@ fs.readdir('./commands/', (err, files) => {
 
 //information de connection
 bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XViUow.a0DTOxZvgSB1v_dvr7bNCBg5RdA')
-bot.on('ready', async message => {
+bot.on('ready', async () => {
     console.log('bot connecter');
     bot.user.setActivity("faire chier un putin de SCP");
-    return bot.guilds.channel.get('588734587174125588').send('je suis connecter petit con de SCP');
 });
 
 bot.on('message', async message => {
