@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
         message.mentions.users.first() || message.guild.members.get(args[0])
     );
 
-    if(!Here) return message.channel.send('tu as oublier de mentionner here');
+    //if(!Here) return message.channel.send('tu as oublier de mentionner here');
 
     await Here.AddRole('610901457499193372');
 
