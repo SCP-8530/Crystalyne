@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
     //if(!Here) return message.channel.send('tu as oublier de mentionner here');
 
-    await Here.AddRole('610901457499193372');
+    await Here.addRole('610901457499193372');
 
     message.channel.send('ok -_-');
 
