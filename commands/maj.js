@@ -5,8 +5,11 @@ module.exports.run = async (bot, message, args) => {
     let Here = message.guild.member(
         message.mentions.users.first() || message.guild.members.get(args[0])
     );
-    if(!Here) return message.channel.send('tu as oublier de mentionner here')
-    if(Here) Here.AddRole('610901457499193372')
+
+    if(!Here) return message.channel.send('tu as oublier de mentionner here');
+
+    if(Here) Here.AddRole('610901457499193372');
+    
     message.channel.send('ok -_-');
 
 
