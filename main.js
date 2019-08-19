@@ -24,7 +24,7 @@ bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XViUow.a0DTOxZvgSB1v_dvr7bNCBg5RdA')
 bot.on('ready', async () => {
     console.log('bot connecter');
     bot.user.setActivity("Observer Langitia");
-    message.channel.get('588734587174125588').send('je suis connecter petit con de SCP');
+    return message.channel.get('588734587174125588').send('je suis connecter petit con de SCP');
 });
 
 bot.on('message', async message => {
