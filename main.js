@@ -9,7 +9,7 @@ fs.readdir('./commands/', (err, files) => {
 
     let jsFile = files.filter(f => f.split('.').pop() === 'js');
     if (jsFile.length <= 0){
-        console.log('commande introuvable');
+        console.log("il n'y as pas de commandes dans le ficher");
         return;
     };
 
@@ -20,17 +20,17 @@ fs.readdir('./commands/', (err, files) => {
 });
 
 //information de connection
-bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XViUow.a0DTOxZvgSB1v_dvr7bNCBg5RdA')
+bot.login('NjEyMDM4MDAxNDg4NTYwMTI5.XVci0w.pCuT0OsMOme_694R5ymqmvSDrLU')
 bot.on('ready', async () => {
     console.log('bot connecter');
-    bot.user.setActivity("faire chier un putin de SCP");
+    bot.user.setActivity("rien");
 });
 
 bot.on('message', async message => {
     if (message.author.bot) return;
     if (message.channel.type === 'dm') return;
     
-    let prefix = 'c!';
+    let prefix = '/';
     let messageArray = message.content.split(' ');
     let command = messageArray[0];
     let args = messageArray.slice(1);
