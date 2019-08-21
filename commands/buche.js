@@ -7,9 +7,9 @@ module.exports.run = async (bot, message, args) => {
     let bois = Math.floor((Math.random() * prob.length + 1))
 
     message.channel.send(`Tu as recuperer ${bois} de bois. Ses ressource se teleporte dans ton crystal`)
-    let channellog = message.guild.channels.find('id', '577692932816109621');
+    let channellog = message.guild.channels.find('id', '604987895207428096');
     let utilisateur = message.member
-    channellog.send(`${utilisateur} ${bois}`)
+    channellog.send(`!give-item ${utilisateur} ${bois} bois`)
 };
 
 module.exports.help = {
