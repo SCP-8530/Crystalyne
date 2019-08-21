@@ -20,7 +20,7 @@ fs.readdir('./commands/', (err, files) => {
 });
 
 //information de connection
-bot.login('NjEwMjAxNzQxNjEwNDUwOTQ0.XV2kDA._PdGsQEw3dkIH-aW6JUEnogB5ek')
+bot.login('MTAyLDkwLDUxLDE1NCw0OCwyMTUsMTI1LDEx')
 bot.on('ready', async () => {
     console.log('bot connecter');
     bot.user.setActivity("rien");
