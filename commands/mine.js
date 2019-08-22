@@ -18,21 +18,25 @@ module.exports.run = async (bot, message, args) => {
     let utilisateur = message.member;
 
     //give
-    setTimeout(() => {
+    setInterval(() => {
         channellog.send(`!give-item ${utilisateur} ${pierre} pierre`);
+        setInterval(() => {
+            channellog.send(`!give-item ${utilisateur} ${charbon} charbon`);
+            setInterval(() => {
+                channellog.send(`!give-item ${utilisateur} ${fer} minerai de fer`);
+                setInterval(() => {
+                    channellog.send(`!give-item ${utilisateur} ${or} minerai de or`);
+                }, 2500);
+            }, 2500);
+        }, 2500);
     }, 2500);
 
-    setTimeout(() => {
-        channellog.send(`!give-item ${utilisateur} ${charbon} charbon`);
-    }, 2500);
 
-    setTimeout(() => {
-        channellog.send(`!give-item ${utilisateur} ${fer} minerai de fer`);
-    }, 2500);
+    
 
-    setTimeout(() => {
-        channellog.send(`!give-item ${utilisateur} ${or} minerai de or`);
-    }, 2500);
+    
+
+    
 };
 
 module.exports.help = {
