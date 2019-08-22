@@ -17,10 +17,9 @@ module.exports.run = async (bot, message, args) => {
     let channellog = message.guild.channels.find('id', '604987895207428096');
     let utilisateur = message.member;
     channellog.send(`!give-item ${utilisateur} ${pierre} pierre`);
-    bot.setTimeout(() => {
-        1000
-    }, timeout);
-    channellog.send(`!give-item ${utilisateur} ${charbon} charbon`);
+    setTimeout(() => {
+        channellog.send(`!give-item ${utilisateur} ${charbon} charbon`);
+    }, 1000);
     channellog.send(`!give-item ${utilisateur} ${fer} minerai de fer`);
     channellog.send(`!give-item ${utilisateur} ${or} minerai de or`);
 };
