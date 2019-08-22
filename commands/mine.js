@@ -18,8 +18,10 @@ module.exports.run = async (bot, message, args) => {
     let utilisateur = message.member;
 
     //give
-    channellog.send(`!give-item ${utilisateur} ${pierre} pierre`);
-
+    setTimeout(() => {
+        channellog.send(`!give-item ${utilisateur} ${pierre} pierre`);
+    }, 1000);
+    
     setTimeout(() => {
         channellog.send(`!give-item ${utilisateur} ${charbon} charbon`);
     }, 1000);
