@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     let proba = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
     let probb = [1, 2, 3, 4, 5];
     let probc = [1, 2, 3];
-    
+
     //les differentes ressources
     let vege = Math.floor((Math.random() * proba.length + 1));
     let bois = Math.floor((Math.random() * probb.length));
@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     let utilisateur = message.member;
     channellog.send(`!give-item ${utilisateur} ${vege} végétaux`);
     channellog.send(`!give-item ${utilisateur} ${bois} bois`);
-    channellog.send(`!give-item ${utilisateur} ${pierre} végétaux`);
+    channellog.send(`!give-item ${utilisateur} ${pierre} pierre`);
 };
 
 module.exports.help = {
