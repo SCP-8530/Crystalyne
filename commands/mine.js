@@ -20,19 +20,19 @@ module.exports.run = async (bot, message, args) => {
     //give
     setTimeout(() => {
         channellog.send(`!give-item ${utilisateur} ${pierre} pierre`);
-    }, 1000);
-    
+    }, 2500);
+
     setTimeout(() => {
         channellog.send(`!give-item ${utilisateur} ${charbon} charbon`);
-    }, 1000);
+    }, 2500);
 
     setTimeout(() => {
         channellog.send(`!give-item ${utilisateur} ${fer} minerai de fer`);
-    }, 1000);
+    }, 2500);
 
     setTimeout(() => {
         channellog.send(`!give-item ${utilisateur} ${or} minerai de or`);
-    }, 1000);
+    }, 2500);
 };
 
 module.exports.help = {
