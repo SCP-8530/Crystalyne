@@ -26,8 +26,9 @@ bot.on('ready', async message => {
     bot.user.setActivity("rien");
 });
 
-let channeltest = message.guild.channels.find('id', '613126591203115149');
-channeltest.send('je suis mis a jour')
+
+fs.readdir('./read.js')
+
 
 
 
