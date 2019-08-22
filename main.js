@@ -24,10 +24,15 @@ bot.login('NjEzODI4NzM1NTg1NDg0ODAw.XV2qqw.mFd4zkgeMcN3zpjDPM7ZWPaoPUQ')
 bot.on('ready', async message => {
     console.log('bot connecter');
     bot.user.setActivity("rien");
-    let channeltest = message.guild.channels.find('id', '613126591203115149');
-    channeltest.send('je suis mis a jour')
-
 });
+
+let channeltest = message.guild.channels.find('id', '613126591203115149');
+channeltest.send('je suis mis a jour')
+
+
+
+
+
 
 bot.on('message', async message => {
     if (message.author.bot) return;
