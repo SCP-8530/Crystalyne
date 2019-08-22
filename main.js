@@ -27,13 +27,6 @@ bot.on('ready', async message => {
 });
 
 
-fs.readdir('./read.js')
-
-
-
-
-
-
 
 bot.on('message', async message => {
     if (message.author.bot) return;
