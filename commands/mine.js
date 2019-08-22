@@ -16,23 +16,24 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(`Tu as recuperer **${pierre} de pierre.** Tu as recuperer **${charbon} de charbon.** Tu as recuperer **${fer} de minerai de fer.** Tu as recuperer **${or} de minerai de or.** Ses ressource se teleporte dans ton crystal.`);
     let channellog = message.guild.channels.find('id', '604987895207428096');
     let utilisateur = message.member;
+    let latence = 1500
 
     //give
     bot.setTimeout(() => {
         channellog.send(`!give-item ${utilisateur} ${pierre} pierre`);
-    }, 500);
+    }, latence * 0);
 
     bot.setTimeout(() => {
     channellog.send(`!give-item ${utilisateur} ${charbon} charbon`);        
-    }, 1500);
+    }, latence * 1);
 
     bot.setTimeout(() => {
         channellog.send(`!give-item ${utilisateur} ${fer} minerai de fer`);       
-    }, 2500);
+    }, latence * 2);
 
     bot.setTimeout(() => {
         channellog.send(`!give-item ${utilisateur} ${or} minerai de or`);
-    }, 3500);
+    }, latence * 3);
     
 };
 
