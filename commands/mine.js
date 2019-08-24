@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     let or = Math.floor((Math.random() * probd.length));
 
     //logchannel
-    let channelIDpierre = 614242539888967738;
+    let IDchannelpierre = 614242539888967738;
     let IDchannelfer = 614242581177565210;
     let IDchannelcharbon = 614242610562859041;
     let IDchannelor = 614242653839818771;
@@ -26,25 +26,30 @@ module.exports.run = async (bot, message, args) => {
     let IDchannel9 = 614242831829041162;
     //reponce
     message.channel.send(`Tu as recuperer **${pierre} de pierre.** Tu as recuperer **${charbon} de charbon.** Tu as recuperer **${fer} de minerai de fer.** Tu as recuperer **${or} de minerai de or.** Ses ressource se teleporte dans ton crystal.`);
-    //let channellog = message.guild.channels.find('id', IDchannel);
     let utilisateur = message.member;
     let latence = 3000
 
+    //channel log
+    let channellogp = message.guild.channels.find('id', IDchannelpierre);
+    let channellogc = message.guild.channels.find('id', IDchannelcharbon);
+    let channellogf = message.guild.channels.find('id', IDchannelfer);
+    let channellogo = message.guild.channels.find('id', IDchannelor);
+
     //give
     bot.setTimeout(() => {
-        message.guild.channels.find('id', channelIDpierre).send(`!give-item ${utilisateur} ${pierre} pierre`);
+        channellogp.send(`!give-item ${utilisateur} ${pierre} pierre`);
     }, latence * 0);
 
     bot.setTimeout(() => {
-        message.guild.channels.find('id', IDchannelcharbon).send(`!give-item ${utilisateur} ${charbon} charbon`);        
+        channellogc.send(`!give-item ${utilisateur} ${charbon} charbon`);        
     }, latence * 1);
 
     bot.setTimeout(() => {
-        message.guild.channels.find('id', IDchannelfer).send(`!give-item ${utilisateur} ${fer} minerai de fer`);       
+        channellogf.send(`!give-item ${utilisateur} ${fer} minerai de fer`);       
     }, latence * 2);
 
     bot.setTimeout(() => {
-        message.guild.channels.find('id', IDchannelor).send(`!give-item ${utilisateur} ${or} minerai d'or`);
+        channellogo.send(`!give-item ${utilisateur} ${or} minerai d'or`);
     }, latence * 3);
     
 };
