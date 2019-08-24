@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
     }, latence * 2);
 
     bot.setTimeout(() => {
-        channellog.send(`!give-item ${utilisateur} ${or} minerai de or`);
+        channellog.send(`!give-item ${utilisateur} ${or} minerai d'or`);
     }, latence * 3);
     
 };
