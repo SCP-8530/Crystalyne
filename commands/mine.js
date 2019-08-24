@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
     if (IDchannel==9) return {let channelID = 614242831829041162};c*/
     //reponce
     message.channel.send(`Tu as recuperer **${pierre} de pierre.** Tu as recuperer **${charbon} de charbon.** Tu as recuperer **${fer} de minerai de fer.** Tu as recuperer **${or} de minerai de or.** Ses ressource se teleporte dans ton crystal.`);
-    let channellog = message.guild.channels.find('id', channelID);
+    let channellog = message.guild.channels.find('id', '604987895207428096');
     let utilisateur = message.member;
     let latence = 3000
 
