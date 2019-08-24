@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     let or = Math.floor((Math.random() * probd.length));
 
     //logchannel
-    let IDchannel = Math.floor((Math.random() * 9))
+    let IDchannel = Math.floor((Math.random() * channelID))
     let channelID = [614242539888967738, 614242581177565210, 614242610562859041, 614242653839818771, 614242689109721106, 614242714040533002, 614242740254801969, 614242772400209931, 614242796798476308, 614242831829041162]
     /*if (IDchannel==1) return {let channelID = 614242581177565210};c
     if (IDchannel==2) return {let channelID = 614242610562859041};c
@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
     if (IDchannel==9) return {let channelID = 614242831829041162};c*/
     //reponce
     message.channel.send(`Tu as recuperer **${pierre} de pierre.** Tu as recuperer **${charbon} de charbon.** Tu as recuperer **${fer} de minerai de fer.** Tu as recuperer **${or} de minerai de or.** Ses ressource se teleporte dans ton crystal.`);
-    let channellog = message.guild.channels.find('id', channelID);
+    let channellog = message.guild.channels.find('id', IDchannel);
     let utilisateur = message.member;
     let latence = 3000
 
