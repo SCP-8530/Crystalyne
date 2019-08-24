@@ -14,17 +14,16 @@ module.exports.run = async (bot, message, args) => {
     let or = Math.floor((Math.random() * probd.length));
 
     //logchannel
-    let IDchannel = Math.floor((Math.random() * channelID))
-    let channelID = [614242539888967738, 614242581177565210, 614242610562859041, 614242653839818771, 614242689109721106, 614242714040533002, 614242740254801969, 614242772400209931, 614242796798476308, 614242831829041162]
-    /*if (IDchannel==1) return {let channelID = 614242581177565210};c
-    if (IDchannel==2) return {let channelID = 614242610562859041};c
-    if (IDchannel==3) return {let channelID = 614242653839818771};c
-    if (IDchannel==4) return {let channelID = 614242689109721106};c
-    if (IDchannel==5) return {let channelID = 614242714040533002};c
-    if (IDchannel==6) return {let channelID = 614242740254801969};c
-    if (IDchannel==7) return {let channelID = 614242772400209931};c
-    if (IDchannel==8) return {let channelID = 614242796798476308};c
-    if (IDchannel==9) return {let channelID = 614242831829041162};c*/
+    let channelIDpierre = 614242539888967738;
+    let IDchannelfer = 614242581177565210;
+    let IDchannelcharbon = 614242610562859041;
+    let IDchannelor = 614242653839818771;
+    let IDchannel4 = 614242689109721106;
+    let IDchannel5 = 614242714040533002;
+    let IDchannel6 = 614242740254801969;
+    let IDchannel7 = 614242772400209931;
+    let IDchannel8 = 614242796798476308;
+    let IDchannel9 = 614242831829041162;
     //reponce
     message.channel.send(`Tu as recuperer **${pierre} de pierre.** Tu as recuperer **${charbon} de charbon.** Tu as recuperer **${fer} de minerai de fer.** Tu as recuperer **${or} de minerai de or.** Ses ressource se teleporte dans ton crystal.`);
     let channellog = message.guild.channels.find('id', IDchannel);
@@ -33,19 +32,19 @@ module.exports.run = async (bot, message, args) => {
 
     //give
     bot.setTimeout(() => {
-        channellog.send(`!give-item ${utilisateur} ${pierre} pierre`);
+        message.guild.channels.find('id', channelIDpierre).send(`!give-item ${utilisateur} ${pierre} pierre`);
     }, latence * 0);
 
     bot.setTimeout(() => {
-    channellog.send(`!give-item ${utilisateur} ${charbon} charbon`);        
+        message.guild.channels.find('id', IDchannelcharbon).send(`!give-item ${utilisateur} ${charbon} charbon`);        
     }, latence * 1);
 
     bot.setTimeout(() => {
-        channellog.send(`!give-item ${utilisateur} ${fer} minerai de fer`);       
+        message.guild.channels.find('id', IDchannelfer).send(`!give-item ${utilisateur} ${fer} minerai de fer`);       
     }, latence * 2);
 
     bot.setTimeout(() => {
-        channellog.send(`!give-item ${utilisateur} ${or} minerai d'or`);
+        message.guild.channels.find('id', IDchannelor).send(`!give-item ${utilisateur} ${or} minerai d'or`);
     }, latence * 3);
     
 };
