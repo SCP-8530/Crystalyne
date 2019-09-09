@@ -23,17 +23,18 @@ module.exports.run = async (bot, message, args) => {
         .setColor('#CD24E6')
         .addField('Journer de minage', 'vous avez miner mais vous ne trouver aucun minerai')
         .addField("Ressuorce recuperer", `${pierre} pierre`);
-        channellog
-    }
+        message.channel.send(Embed);
+        channellog.send(`!give-time ${message.author} ${pierre} pierre`);
+    };
     if (probe==1) {
-        message.channel.send('OK')
-    }
+        message.channel.send('OK');
+    };
     if (probe==2) {
-        message.channel.send('OK')
-    }
+        message.channel.send('OK');
+    };
     if (probe==3) {
-        message.channel.send('OK')
-    }
+        message.channel.send('OK');
+    };
 
     //channel log
     let channellogp = message.guild.channels.find('id', '614242539888967738');
