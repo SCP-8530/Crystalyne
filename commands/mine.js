@@ -12,30 +12,69 @@ module.exports.run = async (bot, message, args) => {
     
     //les differentes ressources
     let pierre = Math.floor((Math.random() * proba.length + 1));
-    let charbon = Math.floor((Math.random() * probb.length));
-    let fer = Math.floor((Math.random() * probc.length));
-    let or = Math.floor((Math.random() * probd.length));
+    let charbon = Math.floor((Math.random() * probb.length + 1));
+    let fer = Math.floor((Math.random() * probc.length + 1));
+    let or = Math.floor((Math.random() * probd.length + 1));
 
     //reponce
-    if (probe==0) {
+    {
+        //pierre
+        if (probe==0) {
         let Embed =new Discord.RichEmbed()
-        .setDescription('Report')
-        .setColor('#CD24E6')
-        .addField('Journer de minage', 'vous avez miner mais vous ne trouver aucun minerai')
-        .addField("Ressoorce recuperer", `${pierre} pierre`);
+            .setDescription('ACTION')
+            .setColor('#CD24E6')
+            .addField('Journer de minage', 'vous avez miner mais vous ne trouver aucun minerai')
+            .addField("Ressource recuperer", `${pierre} pierre`);
         message.channel.send(Embed);
-        channellog.send(`!give-itme ${message.author} ${pierre} pierre`);
-    };
-    if (probe==1) {
-        message.channel.send('OK');
-    };
-    if (probe==2) {
-        message.channel.send('OK');
-    };
-    if (probe==3) {
-        message.channel.send('OK');
+        channellog.send(`!give-item ${message.author} ${pierre} pierre`);
+        };
+
+        //charbon
+        if (probe==1) {
+        let Embed =new Discord.RichEmbed()
+            .setDescription('ACTION')
+            .setColor('#CD24E6')
+            .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
+            .addField("Ressource recuperer", `${pierre} pierre` `${charbon} charbon`, );
+        message.channel.send(Embed);
+
+        channellog.send(`!give-item ${message.author} ${pierre} pierre`);
+        bot.setTimeout(() => {
+                channellog.send(`!give-item ${message.author} ${charbon} charbon`)
+        }, 1000);
+        };
+
+        //fer
+        if (probe==2) {
+        let Embed =new Discord.RichEmbed()
+            .setDescription('ACTION')
+            .setColor('#CD24E6')
+            .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de fer')
+            .addField("Ressource recuperer", `${pierre} pierre` `${fer} fer`, );
+        message.channel.send(Embed);
+            
+        channellog.send(`!give-item ${message.author} ${pierre} pierre`);
+        bot.setTimeout(() => {
+            channellog.send(`!give-item ${message.author} ${charbon} charbon`)
+        }, 1000);
     };
 
+        //or 
+        if (probe==3) {
+            let Embed =new Discord.RichEmbed()
+                .setDescription('ACTION')
+                .setColor('#CD24E6')
+                .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
+                .addField("Ressource recuperer", `${pierre} pierre` `${charbon} charbon`, );
+            message.channel.send(Embed);
+            
+            channellog.send(`!give-item ${message.author} ${pierre} pierre`);
+            bot.setTimeout(() => {
+                channellog.send(`!give-item ${message.author} ${charbon} charbon`)
+            }, 1000);
+        };
+    };
+    
     //channel log
     let channellogp = message.guild.channels.find('id', '614242539888967738');
     let channellogc = message.guild.channels.find('id', '614242581177565210');
