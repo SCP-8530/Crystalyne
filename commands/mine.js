@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     let probb = [1, 2, 3, 4, 5, 6];
     let probc = [1, 2, 3, 4, 5, 6];
     let probd = [1, 2, 3, 4, 5, 6];
-    let probe = [1, 2, 3, 4];
+    let probe = Math.floor((Math.random(3)));
     
     //les differentes ressources
     let pierre = Math.floor((Math.random() * proba.length + 1));
@@ -17,12 +17,22 @@ module.exports.run = async (bot, message, args) => {
     let or = Math.floor((Math.random() * probd.length));
 
     //reponce
-    /*message.channel.send(`Tu as recuperer **${pierre} de pierre.** Tu as recuperer **${charbon} de charbon.** Tu as recuperer **${fer} de minerai de fer.** Tu as recuperer **${or} de minerai de or.** Ses ressource se teleporte dans ton crystal.`);
-    let utilisateur = message.member;
-    let latence = 3000*/
     if (probe==0) {
-        let Embed =[1]
+        let Embed =new Discord.RichEmbed()
+        .setDescription('Report')
+        .setColor('#CD24E6')
+        .addField('Journer de minage', 'vous avez miner mais vous ne trouver aucun minerai')
+        .addField("Ressuorce recuperer", `${pierre} pierre`);
         channellog
+    }
+    if (probe==1) {
+        message.channel.send('OK')
+    }
+    if (probe==2) {
+        message.channel.send('OK')
+    }
+    if (probe==3) {
+        message.channel.send('OK')
     }
 
     //channel log
