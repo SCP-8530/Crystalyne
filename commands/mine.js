@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     let probb = [1, 2, 3, 4, 5, 6];
     let probc = [1, 2, 3, 4, 5, 6];
     let probd = [1, 2, 3, 4, 5, 6];
-    let probe = Math.floor((Math.random(3)));
+    let probe = Math.floor((Math.random() * 3));
     
     //les differentes ressources
     let pierre = Math.floor((Math.random() * proba.length + 1));
