@@ -22,9 +22,9 @@ module.exports.run = async (bot, message, args) => {
         .setDescription('Report')
         .setColor('#CD24E6')
         .addField('Journer de minage', 'vous avez miner mais vous ne trouver aucun minerai')
-        .addField("Ressuorce recuperer", `${pierre} pierre`);
+        .addField("Ressoorce recuperer", `${pierre} pierre`);
         message.channel.send(Embed);
-        channellog.send(`!give-time ${message.author} ${pierre} pierre`);
+        channellog.send(`!give-itme ${message.author} ${pierre} pierre`);
     };
     if (probe==1) {
         message.channel.send('OK');
