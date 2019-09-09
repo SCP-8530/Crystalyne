@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) => {
             .setDescription('ACTION')
             .setColor('#CD24E6')
             .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
-            .addField("Ressource recuperer", `${pierre} pierre` `${charbon} charbon`, );
+            .addField("Ressource recuperer", `${pierre} pierre`, `${charbon} charbon`, );
         message.channel.send(Embed);
 
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
@@ -50,7 +50,7 @@ module.exports.run = async (bot, message, args) => {
             .setDescription('ACTION')
             .setColor('#CD24E6')
             .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de fer')
-            .addField("Ressource recuperer", `${pierre} pierre` `${fer} fer`, );
+            .addField("Ressource recuperer", `${pierre} pierre`, `${fer} fer`, );
         message.channel.send(Embed);
             
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
@@ -65,7 +65,7 @@ module.exports.run = async (bot, message, args) => {
                 .setDescription('ACTION')
                 .setColor('#CD24E6')
                 .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
-                .addField("Ressource recuperer", `${pierre} pierre` `${charbon} charbon`, );
+                .addField("Ressource recuperer", `${pierre} pierre`, `${charbon} charbon`, );
             message.channel.send(Embed);
             
             channellog.send(`!give-item ${message.author} ${pierre} pierre`);
