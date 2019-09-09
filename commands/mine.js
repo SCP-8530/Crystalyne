@@ -21,12 +21,9 @@ module.exports.run = async (bot, message, args) => {
     let utilisateur = message.member;
     let latence = 3000*/
     if (probe==0) {
-        let Embed =()
+        let Embed =[1]
         channellog
     }
-    
-    //embed
-    let embed = new.Embed
 
     //channel log
     let channellogp = message.guild.channels.find('id', '614242539888967738');
