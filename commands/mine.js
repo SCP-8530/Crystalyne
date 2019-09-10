@@ -53,7 +53,7 @@ module.exports.run = async (bot, message, args) => {
             
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
         bot.setTimeout(() => {
-            channellog.send(`!give-item ${message.author} ${charbon} charbon`)
+            channellog.send(`!give-item ${message.author} ${fer} minerai de fer`)
         }, 1000);
     };
 
@@ -63,12 +63,12 @@ module.exports.run = async (bot, message, args) => {
                 .setDescription('ACTION')
                 .setColor('#CD24E6')
                 .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
-                .addField("Ressource recuperer", `${pierre} pierre`, `${charbon} minerai de fer`, );
+                .addField("Ressource recuperer", `${pierre} pierre`, `${or} minerai d'or`, );
             message.channel.send(Embedd);
             
             channellog.send(`!give-item ${message.author} ${pierre} pierre`);
             bot.setTimeout(() => {
-                channellog.send(`!give-item ${message.author} ${charbon} minerai d'or`)
+                channellog.send(`!give-item ${message.author} ${or} minerai d'or`)
             }, 1000);
         };
     };
