@@ -20,23 +20,23 @@ module.exports.run = async (bot, message, args) => {
     {
         //pierre
         if (probe==0) {
-        let Embed =new Discord.RichEmbed()
+        let Embeda =new Discord.RichEmbed()
             .setDescription('ACTION')
             .setColor('#CD24E6')
             .addField('Journer de minage', 'vous avez miner mais vous ne trouver aucun minerai')
             .addField("Ressource recuperer", `${pierre} pierre`);
-        message.channel.send(Embed);
+        message.channel.send(Embeda);
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
         };
 
         //charbon
         if (probe==1) {
-        let Embed =new Discord.RichEmbed()
+        let Embedb =new Discord.RichEmbed()
             .setDescription('ACTION')
             .setColor('#CD24E6')
             .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
             .addField("Ressource recuperer", `${pierre} pierre`, `${charbon} charbon`, );
-        message.channel.send(Embed);
+        message.channel.send(Embedb);
 
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
         bot.setTimeout(() => {
@@ -46,12 +46,12 @@ module.exports.run = async (bot, message, args) => {
 
         //fer
         if (probe==2) {
-        let Embed =new Discord.RichEmbed()
+        let Embedc =new Discord.RichEmbed()
             .setDescription('ACTION')
             .setColor('#CD24E6')
             .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de fer')
             .addField("Ressource recuperer", `${pierre} pierre`, `${fer} fer`, );
-        message.channel.send(Embed);
+        message.channel.send(Embedc);
             
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
         bot.setTimeout(() => {
@@ -61,12 +61,12 @@ module.exports.run = async (bot, message, args) => {
 
         //or 
         if (probe==3) {
-            let Embed =new Discord.RichEmbed()
+            let Embedd =new Discord.RichEmbed()
                 .setDescription('ACTION')
                 .setColor('#CD24E6')
                 .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
                 .addField("Ressource recuperer", `${pierre} pierre`, `${charbon} charbon`, );
-            message.channel.send(Embed);
+            message.channel.send(Embedd);
             
             channellog.send(`!give-item ${message.author} ${pierre} pierre`);
             bot.setTimeout(() => {
