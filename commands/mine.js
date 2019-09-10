@@ -63,12 +63,12 @@ module.exports.run = async (bot, message, args) => {
                 .setDescription('ACTION')
                 .setColor('#CD24E6')
                 .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
-                .addField("Ressource recuperer", `${pierre} pierre`, `${charbon} charbon`, );
+                .addField("Ressource recuperer", `${pierre} pierre`, `${charbon} minerai de fer`, );
             message.channel.send(Embedd);
             
             channellog.send(`!give-item ${message.author} ${pierre} pierre`);
             bot.setTimeout(() => {
-                channellog.send(`!give-item ${message.author} ${charbon} charbon`)
+                channellog.send(`!give-item ${message.author} ${charbon} minerai d'or`)
             }, 1000);
         };
     };
