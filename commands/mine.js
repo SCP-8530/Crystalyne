@@ -78,23 +78,6 @@ module.exports.run = async (bot, message, args) => {
     let channellogc = message.guild.channels.find('id', '614242581177565210');
     let channellogf = message.guild.channels.find('id', '614242581177565210');
     let channellogo = message.guild.channels.find('id', '614242653839818771');
-
-    /*give
-    bot.setTimeout(() => {
-        channellogp.send(`!give-item ${utilisateur} ${pierre} pierre`);
-    }, latence * 0);
-
-    bot.setTimeout(() => {
-        channellogc.send(`!give-item ${utilisateur} ${charbon} charbon`);        
-    }, latence * 1);
-
-    bot.setTimeout(() => {
-        channellogf.send(`!give-item ${utilisateur} ${fer} minerai de fer`);       
-    }, latence * 2);
-
-    bot.setTimeout(() => {
-        channellogo.send(`!give-item ${utilisateur} ${or} minerai d'or`);
-    }, latence * 3);*/
     
 };
 
