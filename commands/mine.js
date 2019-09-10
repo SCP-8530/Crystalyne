@@ -39,9 +39,7 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(Embedb);
 
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
-        bot.setTimeout(() => {
-                channellog.send(`!give-item ${message.author} ${charbon} charbon`)
-        }, 1000);
+        channellog.send(`!give-item ${message.author} ${charbon} charbon`)
         };
 
         //fer
