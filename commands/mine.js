@@ -36,6 +36,7 @@ module.exports.run = async (bot, message, args) => {
             .setColor('#CD24E6')
             .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
             .addField("Ressource recuperer", `${pierre} pierre et ${charbon} charbon`);
+            addField(" ", `${charbon} charbon`);
         message.channel.send(Embedb);
 
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
