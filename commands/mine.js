@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     {
         //pierre
         if (probe==0) {
-        let Embeda =new Discord.RichEmbed()
+        let Embeda = new Discord.RichEmbed()
             .setDescription('ACTION')
             .setColor('#CD24E6')
             .addField('Journer de minage', 'vous avez miner mais vous ne trouver aucun minerai')
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
 
         //charbon
         if (probe==1) {
-        let Embedb =new Discord.RichEmbed()
+        let Embedb = new Discord.RichEmbed()
             .setDescription('ACTION')
             .setColor('#CD24E6')
             .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
@@ -39,12 +39,12 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(Embedb);
 
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
-        channellog.send(`!give-item ${message.author} ${charbon} charbon`)
+        channellog.send(`!give-item ${message.author} ${charbon} charbon`);
         };
 
         //fer
         if (probe==2) {
-        let Embedc =new Discord.RichEmbed()
+        let Embedc = new Discord.RichEmbed()
             .setDescription('ACTION')
             .setColor('#CD24E6')
             .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de fer')
@@ -52,14 +52,12 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(Embedc);
             
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
-        bot.setTimeout(() => {
-            channellog.send(`!give-item ${message.author} ${fer} minerai de fer`)
-        }, 1000);
-    };
+        channellog.send(`!give-item ${message.author} ${fer} minerai de fer`);
+        };
 
         //or 
         if (probe==3) {
-            let Embedd =new Discord.RichEmbed()
+            let Embedd = new Discord.RichEmbed()
                 .setDescription('ACTION')
                 .setColor('#CD24E6')
                 .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
@@ -67,17 +65,9 @@ module.exports.run = async (bot, message, args) => {
             message.channel.send(Embedd);
             
             channellog.send(`!give-item ${message.author} ${pierre} pierre`);
-            bot.setTimeout(() => {
-                channellog.send(`!give-item ${message.author} ${or} minerai d'or`)
-            }, 1000);
+            channellog.send(`!give-item ${message.author} ${or} minerai d'or`)
         };
     };
-    
-    //channel log
-    let channellogp = message.guild.channels.find('id', '614242539888967738');
-    let channellogc = message.guild.channels.find('id', '614242581177565210');
-    let channellogf = message.guild.channels.find('id', '614242581177565210');
-    let channellogo = message.guild.channels.find('id', '614242653839818771');
     
 };
 
