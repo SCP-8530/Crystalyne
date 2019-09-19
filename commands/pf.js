@@ -4,7 +4,7 @@ const Discord = require(`discord.js`);
 module.exports.run = async (bot, message, args) => {
     //differente reponce
     let pilev = "Bravo c'est tomber sur Pile";
-    let piled = "Dommmage c'est tomber sur Face";
+    let piled = "Dommage c'est tomber sur Face";
     let facev = "Bravo c'est tomber sur Face";
     let faced = "Dommage c'est tomber sur Pile";
     
