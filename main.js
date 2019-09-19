@@ -23,7 +23,7 @@ fs.readdir('./commands/', (err, files) => {
 bot.login('NjEzODI4NzM1NTg1NDg0ODAw.XV2qqw.mFd4zkgeMcN3zpjDPM7ZWPaoPUQ')
 bot.on('ready', async () => {
     console.log('bot connecter');
-    bot.user.setActivity("observer langitia");
+    bot.user.setActivity("observer Langitia");
 });
 
 
