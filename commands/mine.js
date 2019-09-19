@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     let probb = [1, 2, 3, 4, 5, 6];
     let probc = [1, 2, 3, 4, 5, 6];
     let probd = [1, 2, 3, 4, 5, 6];
-    let probe = Math.floor((Math.random() * 3));
+    let probe = Math.floor((Math.random() * 4));
     
     //les differentes ressources
     let pierre = Math.floor((Math.random() * proba.length + 1));
@@ -36,7 +36,6 @@ module.exports.run = async (bot, message, args) => {
             .setColor('#CD24E6')
             .addField('Journer de minage', 'vous avez miner et vous trouver un fillon de charbon')
             .addField("Ressource recuperer", `${pierre} pierre et ${charbon} charbon`);
-            addField(" ", `${charbon} charbon`);
         message.channel.send(Embedb);
 
         channellog.send(`!give-item ${message.author} ${pierre} pierre`);
