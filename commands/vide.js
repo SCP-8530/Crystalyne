@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     };
 
     if (user_void_inv) {
-        message.channel.send(`Veuiller patienter que son inventaire soit clear`)
+        message.channel.send(`Veuiller patienter que son inventaire soit clear`);
 
         //clear
         let logchannel = message.guild.channels.find('id', '604987895207428096');
@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
         logchannel.send(`!take-item ${user_void_inv} 10000 lingo d'or`);
         logchannel.send(`!take-item ${user_void_inv} 10000 lingo de fer`);
 
-        message.channel.send('inventaire clear'):
+        message.channel.send('inventaire clear');
     };
 
 };
