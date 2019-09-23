@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         .setDescription('Craft')
         .setColor('#E41764')
         .addField('Caractere inconnue', 'Argument possible: ``help`` ``liste`` ``[ID]``');
-    let Embed_help = new Discord.RichEmbed
+    let Embed_help = new Discord.RichEmbed()
         .setDescription('Craft')
         .setColor('#1493FE')
         .addField('help', "permet d'avoir les description des argument pour la commande /craft")
