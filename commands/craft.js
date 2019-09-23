@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
     //raccourcie
-    let idee = args.join(' ').slice(22)
-    let reponse = message.channel.send
+    let idee = args.join(' ').slice(22);
+    let reponse = message.channel.send;
     //embed
     let Embed_inconnue = new Discord.RichEmbed()
         .setDescription('Craft')
@@ -27,11 +27,11 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(Embed_inconnue)
     };
 
-    if (idee==help) {
+    if (idee=='help') {
         reponse(Embed_help);
     };
 
-    if (idee==liste) {
+    if (idee=='liste') {
         reponse(Embed_liste)
     };
 };
