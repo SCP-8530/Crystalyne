@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(`Veuiller patienter que son inventaire soit clear`)
 
     //clear
-    let logchannel = message.channel.find('id', '604987895207428096');
+    let logchannel = message.guild.channels.find('id', '604987895207428096');
     
     logchannel.send(`!take-item ${user_void_inv} 10000 bois`)
     logchannel.send(`!take-item ${user_void_inv} 10000 pierre`)
