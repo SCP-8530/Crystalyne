@@ -3,8 +3,9 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
     let user_void_inv = message.mentions.members.first();
 
-    if (!user_void_inv) message.channels.send('Aucun utilisitateru as ete mentionner');
-
+    if (!user_void_inv) {
+        message.channels.send('Aucun utilisitateru as ete mentionner');
+    };
     message.channels.send(`Veuiller patienter que son inventaire soit clear`)
 
     //clear
