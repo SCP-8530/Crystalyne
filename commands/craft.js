@@ -2,13 +2,13 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
     //raccourcie
-    let idee = args[1]
+    let idee = args.join(' ').slice(22)
     let reponse = message.channel.send
     //embed
     let Embed_inconnue = new Discord.RichEmbed()
         .setDescription('Craft')
         .setColor('#E41764')
-        .addField('Caractere inconnue', 'Argument possible: ``help`` ``liste`` ``[ID]``');
+        .addField('Caractere inconnue', 'Argument possible: ``help``, ``liste``, ``[ID]``');
     let Embed_help = new Discord.RichEmbed()
         .setDescription('Craft')
         .setColor('#1493FE')
