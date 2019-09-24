@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(Embed_inconnue)
     };
 
-    if (idee=='help') {
+    if (idee==('help')) {
         reponse(Embed_help);
     };
 
