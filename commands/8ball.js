@@ -18,13 +18,13 @@ module.exports.run = async (bot, message, args) => {
         .addField(question, reponse);
     //reponces de 8ball
     let variable8ball = Math.floor((Math.random()* 6));
-
-    if (variable8ball == 0) let reponse = 'oui';
-    if (variable8ball == 1) let reponse = 'non';
-    if (variable8ball == 2) let reponse = 'peut-etre';
-    if (variable8ball == 3) let reponse = 'je ne sais pas';
-    if (variable8ball == 4) let reponse = 'surment';
-    if (variable8ball == 5) let reponse = 'il y a peut de chance';
+    let reponse = 'ok';
+    if (variable8ball == 0)  reponse = 'oui';
+    if (variable8ball == 1)  reponse = 'non';
+    if (variable8ball == 2)  reponse = 'peut-etre';
+    if (variable8ball == 3)  reponse = 'je ne sais pas';
+    if (variable8ball == 4)  reponse = 'surment';
+    if (variable8ball == 5)  reponse = 'il y a peut de chance';
     //comportement
     if (!question) return message.channel.send(errorEmbed);
     if (question == help) message.channel.send(helpEmbed) 
