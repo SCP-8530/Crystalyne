@@ -5,17 +5,17 @@ module.exports.run = async (bot, message, args) => {
     
     //diferente reponse
     let errorEmbed = new Discord.RichEmbed() 
-        .setDescription('8Ball')
-        .setColor('#000000')
-        .addField('Pas de question', 'Veuiller posser une question a 8Ball');
+            .setDescription('8Ball')
+            .setColor('#000000')
+            .addField('Pas de question', 'Veuiller posser une question a 8Ball');
     let helpEmbed = new Discord.RichEmbed()
-        .setDescription('Help 8ball')
-        .setColor('#000000')
-        .addField('','Pause une question a 8ball qui peut se repondre par oui ou par non.');
+            .setDescription('Help 8ball')
+            .setColor('#000000')
+            .addField('','Pause une question a 8ball qui peut se repondre par oui ou par non.');
     let repEmbed = new Discord.RichEmbed()
-        .setDescription('8Ball')
-        .setColor('#000')
-        .addField(question, reponse);
+            .setDescription('8Ball')
+            .setColor('#000')
+            .addField(question, reponse);
     //reponces de 8ball
     let variable8ball = Math.floor((Math.random()* 6));
     let reponse = 'ok';
