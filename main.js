@@ -20,7 +20,7 @@ fs.readdir('./commands/', (err, files) => {
 });
 
 //information de connection
-bot.login('NjEzODI4NzM1NTg1NDg0ODAw.XV2qqw.mFd4zkgeMcN3zpjDPM7ZWPaoPUQ')
+bot.login('NjEzODI4NzM1NTg1NDg0ODAw.XV2qqw.mFd4zkgeMcN3zpjDPM7ZWPaoPUQ') //le token ne fonctionne plus
 bot.on('ready', async () => {
     console.log('bot connecter');
     bot.user.setActivity("observer Langitia");
